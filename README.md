@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 's2p_hancock'
+    S2PHancock.license_key = "<YOUR LICENSE KEY>"
+    S2PHancock.endpoint = "<YOUR HANCOCK INSTANCE URL>"
+    request = S2PHancock::Request.new(:signature_id => "534d568369702d3f640a0000")
+    resp = request.process!
 
 ## Contributing
 
