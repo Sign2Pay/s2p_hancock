@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nick Lloyd"]
   spec.email         = ["nick@nicklloyd.co"]
   spec.summary       = %q{API wrapper for sending and receiving messages to/from Sign2Pay's Signature Verification Service - Hancock}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Sign2Pay/s2p_hancock"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,11 +18,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "typhoeus", '~> 0.6', '>= 0.6.8'
+
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 2.0"
   spec.add_development_dependency "rspec-nc", '~> 0.0', '>= 0.0.6'
-  spec.add_development_dependency "guard", '~> 0.0'
-  spec.add_development_dependency "guard-rspec", '~> 0.0'
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency 'guard-rspec', '~> 4.2', '>= 4.2.9'
+  spec.add_development_dependency "coveralls"
 
 end

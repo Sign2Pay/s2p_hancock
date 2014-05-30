@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.0.0-p353
+
+script: 'bundle exec rake'
+
+notifications:
+  email:
+    recipients:
+      - nick@sign2pay.com
+    on_failure: change
+    on_success: never
