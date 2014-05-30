@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/Sign2Pay/s2p_hancock/badge.png)](https://coveralls.io/r/Sign2Pay/s2p_hancock)
+
 # S2P Hancock
 
 TODO: Write a gem description

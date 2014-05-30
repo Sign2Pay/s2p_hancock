@@ -80,8 +80,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.5)
-  coveralls
-  guard
+  coveralls (~> 0.7.0)
+  guard (~> 2.6)
   guard-rspec (~> 4.2, >= 4.2.9)
   rake (~> 10.0)
   rspec (~> 2.0)
