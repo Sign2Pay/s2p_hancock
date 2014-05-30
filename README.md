@@ -1,4 +1,4 @@
-# S2pHancock
+# S2P Hancock
 
 TODO: Write a gem description
 
@@ -22,7 +22,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/s2p_hancock/fork )
+1. Fork it ( http://github.com/sign2pay/s2p_hancock/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
