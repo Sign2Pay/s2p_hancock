@@ -1,10 +1,9 @@
 module S2PHancock
   class Request
 
-    DefaultTimeout = 60
+    DefaultTimeout = 6000
 
     class << self
-      attr_accessor :default_request_type
       attr_accessor :timeout
     end
 
@@ -49,6 +48,7 @@ module S2PHancock
     def get(query_params)
       request = Typhoeus::Request.new(
         "#{S2PHancock::endpoint}/#{query_params[:signature_id]}",
+        :timeout =>  self.class.timeout || DefaultTimeout,
         method: :get,
         headers: { S2P_License: S2PHancock::license_key }
       )
