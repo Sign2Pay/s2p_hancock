@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = S2PHancock::VERSION
   spec.authors       = ["Nick Lloyd"]
   spec.email         = ["nick@nicklloyd.co"]
-  spec.summary       = %q{API wrapper for sending and receiving messages to/from Sign2Pay's Signature Verification Service - Hancock}
+  spec.summary       = %q{API wrapper for interacting with Sign2Pay's Signature Verification Service - Hancock}
+  spec.description   = %q{API wrapper for sending and receiving messages to/from Sign2Pay's Signature Verification Service - Hancock}
   spec.homepage      = "https://github.com/Sign2Pay/s2p_hancock"
   spec.license       = "MIT"
 
@@ -25,5 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-nc", '~> 0.0', '>= 0.0.6'
   spec.add_development_dependency 'guard', '~> 2.6'
   spec.add_development_dependency 'guard-rspec', '~> 4.2', '>= 4.2.9'
-  spec.add_development_dependency "coveralls", '~> 0.7', '>= 0.7.0'
+  spec.add_development_dependency 'simplecov', '~> 0.7', '>= 0.7.1'
 end
