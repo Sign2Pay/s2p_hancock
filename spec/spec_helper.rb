@@ -16,6 +16,7 @@ RSpec.configure do |config|
   config.raise_errors_for_deprecations!
 
   config.before(:each) do
+    Typhoeus::Expectation.clear
     DeferredGarbageCollection.start
   end
 

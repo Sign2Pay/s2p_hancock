@@ -24,7 +24,7 @@ Or install it yourself as:
     S2PHancock.license_key = "<YOUR LICENSE KEY>"
     S2PHancock.endpoint = "<YOUR HANCOCK INSTANCE URL>"
     request = S2PHancock::Request.new(:signature_id => "534d568369702d3f640a0000")
-    resp = request.process!
+    resp = request.process
 
 ## Contributing
 

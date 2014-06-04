@@ -9,6 +9,8 @@ http_interactions:
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
+      S2P_License:
+      - foo
   response:
     status:
       code: 200
@@ -17,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 04 Jun 2014 08:48:21 GMT
+      - Wed, 04 Jun 2014 12:37:43 GMT
       Server:
       - Apache/2.4.9 (Amazon) mod_wsgi/3.4 Python/2.7.5
       Content-Length:
@@ -31,5 +33,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://hancock.elasticbeanstalk.com/verify/534d568369702d3f640a0000
-  recorded_at: Wed, 04 Jun 2014 08:48:23 GMT
+  recorded_at: Wed, 04 Jun 2014 12:37:45 GMT
 recorded_with: VCR 2.9.2
