@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 
 rvm:
-  - 2.0.0-p353
+  - 2.1.2-p95
 
 script: 'bundle exec rake'
 
