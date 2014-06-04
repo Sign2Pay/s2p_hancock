@@ -22,13 +22,14 @@ module S2PHancock
 
     def process!
       resp = get(query)
-      resp.body.encode!("utf-8", "iso-8859-1") if resp.body.respond_to?(:encode!)
+      resp.body.encode!("utf-8", "iso-8859-1") if resp.body && resp.body.respond_to?(:encode!)
       S2PHancock::Response.new(resp)
     end
 
     def process
       process!
     rescue Exception => e
+      p e
       false
     end
 
@@ -48,9 +49,9 @@ module S2PHancock
     def get(query_params)
       request = Typhoeus::Request.new(
         "#{S2PHancock::endpoint}/#{query_params[:signature_id]}",
-        :timeout =>  self.class.timeout || DefaultTimeout,
-        method: :get,
-        headers: { S2P_License: S2PHancock::license_key }
+        :timeout  =>  self.class.timeout || DefaultTimeout,
+        :method   => :get,
+        :headers  => { "S2P_License" => S2PHancock::license_key.to_s }
       )
       resp = request.run
     rescue Exception => e

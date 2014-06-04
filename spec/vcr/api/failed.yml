@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://hancock.elasticbeanstalk.com/verify/bad_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      S2P_License:
+      - foo
+  response:
+    status:
+      code: 500
+      message: INTERNAL SERVER ERROR
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Wed, 04 Jun 2014 11:23:29 GMT
+      Server:
+      - Apache/2.4.9 (Amazon) mod_wsgi/3.4 Python/2.7.5
+      Content-Length:
+      - '291'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+        <title>500 Internal Server Error</title>
+        <h1>Internal Server Error</h1>
+        <p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://hancock.elasticbeanstalk.com/verify/bad_id
+  recorded_at: Wed, 04 Jun 2014 11:23:30 GMT
+recorded_with: VCR 2.9.2

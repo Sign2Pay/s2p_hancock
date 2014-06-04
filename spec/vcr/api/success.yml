@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://hancock.elasticbeanstalk.com/verify/534d568369702d3f640a0000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 04 Jun 2014 08:48:21 GMT
+      Server:
+      - Apache/2.4.9 (Amazon) mod_wsgi/3.4 Python/2.7.5
+      Content-Length:
+      - '98'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\n  \"confidence\": 1.0, \n  \"signature_id\": \"534d568369702d3f640a0000\",
+        \n  \"verification_OK\": true\n}"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://hancock.elasticbeanstalk.com/verify/534d568369702d3f640a0000
+  recorded_at: Wed, 04 Jun 2014 08:48:23 GMT
+recorded_with: VCR 2.9.2

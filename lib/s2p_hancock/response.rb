@@ -4,8 +4,8 @@ module S2PHancock
     attr_reader :body, :http_code
 
     ATTRIBUTE_MAP = {
-      'confidence' => 'confidence',
-      'signature_id' => 'signature_id',
+      'confidence'      => 'confidence',
+      'signature_id'    => 'signature_id',
       'verification_OK' => 'verification_OK'
     }
 
@@ -29,7 +29,6 @@ module S2PHancock
           end
         end
       else
-        @attributes.message = @body
         handle_error(resp)
       end
       set_attribute(:success, resp.success?)
@@ -40,13 +39,13 @@ module S2PHancock
     def handle_error(response)
       if response.timed_out?
         # aw hell no
-        @attributes.message = "timed_out"
+        set_attribute(:message, "timed_out")
       elsif response.code == 0
         # Could not get an http response, something's wrong.
-        @attributes.message = response.return_message
+        set_attribute(:message, response.return_message)
       else
         # Received a non-successful http response.
-        @attributes.message = "HTTP request failed: " + response.code.to_s
+        set_attribute(:message, "HTTP request failed: " + response.code.to_s)
       end
     end
 
