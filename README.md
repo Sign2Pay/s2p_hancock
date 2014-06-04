@@ -2,7 +2,7 @@
 
 # S2P Hancock
 
-TODO: Write a gem description
+Simple wrapper for interacting with Sign2Pay's Signature Verification Service - Hancock
 
 ## Installation
 
